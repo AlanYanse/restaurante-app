@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { switchAll } from 'rxjs';
+import { Item } from 'src/app/interfaces/item';
+import { PlatosService } from 'src/app/services/platos.service';
 
 @Component({
   selector: 'app-buscador',
@@ -9,8 +11,9 @@ import { switchAll } from 'rxjs';
 export class BuscadorComponent implements OnInit {
 
   busqueda: string = "";
+  listaPlatos: Item[] = [];
 
-  constructor() { }
+  constructor(private _platosService: PlatosService) { }
 
   ngOnInit(): void {
 
@@ -33,7 +36,17 @@ export class BuscadorComponent implements OnInit {
     }else{
 
       // Se utiliza el servicio que consume la api
+      
+      this._platosService.obtenerPlatos(this.busqueda).subscribe((data) => {
+      
+        //console.log(data);
 
+        this.listaPlatos = data.results;
+
+        console.log(this.listaPlatos);
+      
+      });
+      
     }
   }
 

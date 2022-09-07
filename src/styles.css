@@ -3,3 +3,16 @@
 body {
     background-color: #f7cacb;
 }
+
+.imagen{
+    width: 250px;
+}
+
+
+.visualizador{
+    
+    border-bottom: 3px solid #d03d46;
+    padding-bottom: 20px;
+}
+
+

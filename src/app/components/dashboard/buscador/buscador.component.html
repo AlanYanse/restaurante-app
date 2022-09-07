@@ -1,8 +1,65 @@
-<div class="container">
+<div class="container d-flex justify-content-center" style="width: 50%;">
     <div class="input-group mt-3 mb-3">
-        <input type="text" class="form-control transparente" id="txtBuscar" [(ngModel)]="busqueda">
+        <input class="input-buscador" type="text" class="form-control transparente" id="txtBuscar" [(ngModel)]="busqueda">
         <button type="button" class="btn btn" style="background-color: #262e42; color: white;" (click)="buscarPlatos()">
             Buscar</button>
     </div>
 </div>
+<!--
+<div class="container">
+    <div class="d-flex flex-row" *ngFor="let item of listaPlatos">
+        <img src="{{ item.image }}" style="width: 200px; margin-right: 30px; margin-bottom: 10px;" alt="">
+        <p>{{ item.title }}</p>
+        <div>
+            <button class="btn btn-primary">Agregar</button>
+        </div>
+    </div>    
+</div>
 
+
+<div class="container">
+    <div class="row" *ngFor="let item of listaPlatos">
+      <div class="col-sm" style="background-color: red;">
+        One of three columns
+        <img class="imagen" src="{{ item.image }}" alt="">
+      </div>
+      <div class="col-sm" style="background-color: green;">
+        One of three columns
+        <p>Nombre: {{ item.title }}</p>
+      </div>
+      <div class="col-sm align-middle" style="background-color: blue;">
+        <div class="grid-center">
+            One of three columns
+            <button class="btn btn-primary">Agregar</button>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+  -->
+
+  <div class="container mt-4 visualizador">
+    <div class="row">
+      <div class="col-sm d-flex justify-content-center">
+        <div div class="col-md-12 d-flex align-items-center justify-content-center">
+          <img class="imagen" src="https://img.freepik.com/vector-gratis/fondo-galaxia-realista_52683-12121.jpg?size=626&ext=jpg&uid=R12081187&ga=GA1.2.664043575.1661221482" alt="">
+        </div>
+      </div>
+      <div class="col-sm">
+        <div div class="col-md-12">
+          <p>Nombre: </p>
+          <p>Tiempo de preparación: </p>
+          <p>healthScore: </p>
+          <p>vegano: </p>
+          <p>Vegetariano: </p> 
+          <p>Precio: </p>
+        </div>
+      </div>
+      <div class="col-sm d-flex justify-content-center">
+        <div div class="col-md-6 d-flex align-items-center justify-content-center">
+            <button type="button" class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
