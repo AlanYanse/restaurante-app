@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { PlatoItemComponent } from './plato-item/plato-item.component';
+import { DetallesItemComponent } from './detalles-item/detalles-item.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PlatoItemComponent } from './plato-item/plato-item.component';
     HomeComponent,
     NavbarComponent,
     BuscadorComponent,
-    PlatoItemComponent
+    PlatoItemComponent,
+    DetallesItemComponent
   ],
   imports: [
     CommonModule,

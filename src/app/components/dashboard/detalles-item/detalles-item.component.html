@@ -1,0 +1,20 @@
+
+<div class="container box">
+    <div class="card" style="width: 18rem; border-color: #d03d46; border-width: 3px;">
+        <img src="{{ plato.image }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="text-align: center;">{{ plato.title }}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Tiempo de preparación: {{ plato.readyInMinutes }}</li>
+          <li class="list-group-item">healthScore: {{ plato.healthScore }}</li>
+          <li class="list-group-item">vegano: {{ plato.vegan }}</li>
+          <li class="list-group-item">Vegetariano: {{ plato.vegetarian }}</li>
+          <li class="list-group-item">Precio: {{ plato.pricePerServing }}</li>
+        </ul>
+        <div class="card-body" style="text-align: center;">
+          <button class="btn" style="background-color: #262e42; color: white;" routerLink="/dashboard">Volver</button>
+        </div>
+      </div>
+</div>
+
