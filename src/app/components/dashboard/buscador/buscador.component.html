@@ -37,7 +37,7 @@
     </div>
   </div>
 
-  -->
+  
 
   <div class="container mt-4">
     <div class="row mt-4 visualizador" *ngFor="let item of listaPlatos">
@@ -57,9 +57,17 @@
         </div>
       </div>
       <div class="col-sm d-flex justify-content-center">
-        <div div class="col-md-6 d-flex align-items-center justify-content-center">
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
             <button type="button" class="btn btn-primary">Agregar</button>
         </div>
       </div>
     </div>
   </div>
+
+-->
+
+<div class="container">
+  <div *ngFor="let item of listaPlatos">
+      <app-plato-item [plato]="item"></app-plato-item>
+  </div>
+</div>

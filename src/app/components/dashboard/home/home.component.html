@@ -1,1 +1,6 @@
-<p>home works!</p>
+
+<div>
+    <div *ngFor="let item of listaPlatos">
+        <app-plato-item [plato]="item" [isInMisPlatos]="true"></app-plato-item>
+    </div>
+</div>

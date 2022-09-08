@@ -11,7 +11,7 @@ export class MarshallService {
   // Propiedades para el componente de información
 
   cantVeganos: number = 0;
-  noVegan: number = 0;
+  cantNoVegan: number = 0;
   precioTotal: number = 0;
   promedioPreparacion: number = 0;
   promedioHealthScore: number = 0;
@@ -20,35 +20,33 @@ export class MarshallService {
 
   // Métodos que realiza el servicio de Marshall
 
-  addPlatoService(plato: Item){
+ 
 
-    if(this.misPlatos.length < 4 && this.validarTipoPlato(plato)){
 
-      // Se va a agregar al array de misPlatos
-      this.misPlatos.push(plato);
-
-      this.calcularAcumulados();
-    
-    }else{
-
-      // Mensaje de error
-    }
-
-  }
-
-  validarTipoPlato(plato: Item): boolean {
-    
-    if (plato.vegan) {
-      if (this.cantVeganos < 2) {
-        return true
+  addPlatoService(plato: Item): void {
+    if (this.misPlatos.length < 4) {
+      if (this.cantVeganos <= 2) {
+        
+        // Se va a agregar al array de misPlatos
+        this.misPlatos.push(plato);
+        this.calcularAcumulados();
+        alert("Se agrego el plato");
+        console.log(plato.vegan);
+        console.log(`Cantidad acumulada de veganos ${this.cantVeganos}`);
+        console.log(`Cantidad acumulada de NO veganos ${this.cantNoVegan}`);
+      
+      } else {
+        
+        alert("No puede haber mas de 2 platos veganos");
+        
       }
     } else {
-      if (this.noVegan < 2) {
-        return true;
-      }
+      
+      alert("No puede haber mas de 4 platos");
+      
     }
-    return false;
   }
+
 
 
   calcularAcumulados(): void {
@@ -71,15 +69,22 @@ export class MarshallService {
 
   
   calcularVeganos(): void {
-    this.cantVeganos = 0;
-    this.noVegan = 0;
-    this.misPlatos.forEach((plato: any) => {
+   
+    this.misPlatos.forEach((plato: Item) => {
       if (plato.vegan) {
-        this.cantVeganos++
-      } else {
-        this.noVegan++;
+        this.cantVeganos ++;
       }
-    })
+    });
+  }
+
+
+  removePlatoService(plato: Item): void{
+
+    let index = this.misPlatos.indexOf(plato);
+    this.misPlatos.splice(index, 1);
+    this.calcularAcumulados();
+    alert("Se quito el plato");
+
   }
 
 

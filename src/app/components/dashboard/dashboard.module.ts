@@ -10,6 +10,7 @@ import { BuscadorComponent } from './buscador/buscador.component';
 import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
+import { PlatoItemComponent } from './plato-item/plato-item.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     DashboardComponent,
     HomeComponent,
     NavbarComponent,
-    BuscadorComponent
+    BuscadorComponent,
+    PlatoItemComponent
   ],
   imports: [
     CommonModule,
