@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Item } from 'src/app/interfaces/item';
+import { MarshallService } from 'src/app/services/marshall.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  listaPlatos: Item[] = [];
+
+  constructor(private _marshallService: MarshallService) { }
 
   ngOnInit(): void {
+    this.listaPlatos = this._marshallService.misPlatos;
   }
 
 }
