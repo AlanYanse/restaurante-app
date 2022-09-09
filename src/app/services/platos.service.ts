@@ -17,4 +17,10 @@ export class PlatosService {
   obtenerPlatos(busqueda: string): Observable<any> {
     return this.httpClient.get<any>(`${this.apiUrl}recipes/complexSearch?apiKey=${this.apiKey}&query=${busqueda}&addRecipeInformation=true&addRecipeNutrition=true`);
   }
+
+  detallesPlato(id: any) {
+    return this.httpClient.get<any>(`${this.apiUrl}recipes/${id}/information?apiKey=${this.apiKey}`);
+  }
+
+
 }

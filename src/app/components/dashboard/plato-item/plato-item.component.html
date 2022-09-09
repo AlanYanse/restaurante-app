@@ -18,7 +18,7 @@
       </div>
       <div class="col col-12 col-sm-3 d-flex justify-content-center align-items-center">
         <div *ngIf="isInMisPlatos; else templateName">
-            <button type="button" class="btn btn-warning" style="margin: 10px;">Detalles</button>
+            <button type="button" class="btn btn-warning" style="margin: 10px;" (click)="verDetalles(plato.id)">Detalles</button>
             <button type="button" class="btn btn-danger" (click)="eliminarPlato(plato)" style="margin: 10px;">Eliminar</button>
         </div>
         <ng-template #templateName>

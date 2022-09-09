@@ -10,11 +10,10 @@ export class MarshallService {
 
   // Propiedades para el componente de información
 
-  cantVeganos: number = 0;
-  cantNoVegan: number = 0;
-  precioTotal: number = 0;
-  promedioPreparacion: number = 0;
-  promedioHealthScore: number = 0;
+  private cantVeganos: number = 0;
+  private precioTotal: number = 0;
+  private promedioPreparacion: number = 0;
+  private promedioHealthScore: number = 0;
 
   constructor() { }
 
@@ -33,7 +32,6 @@ export class MarshallService {
         alert("Se agrego el plato");
         console.log(plato.vegan);
         console.log(`Cantidad acumulada de veganos ${this.cantVeganos}`);
-        console.log(`Cantidad acumulada de NO veganos ${this.cantNoVegan}`);
       
       } else {
         
@@ -85,6 +83,28 @@ export class MarshallService {
     this.calcularAcumulados();
     alert("Se quito el plato");
 
+  }
+
+  // Métodos get para acceder a las propiedades de clase
+
+  public getCantVeganos(): number{
+
+    return Math.round(this.cantVeganos);
+  }
+
+  public getPrecioTotal(): number{
+
+    return Math.round(this.precioTotal);
+  }
+
+  public getPromedioPreparacion(): number{
+
+    return Math.round(this.promedioPreparacion);
+  }
+
+  public getPromedioHealthScore(): number{
+
+    return Math.round(this.promedioHealthScore);
   }
 
 
