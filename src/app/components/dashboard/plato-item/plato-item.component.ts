@@ -34,11 +34,6 @@ export class PlatoItemComponent implements OnInit {
   verDetalles(id: any) {
     
     this.router.navigate([`dashboard/detalles/${id}`]);
-    /*
-    this._platoService.detallesPlato(id).subscribe((data)=>{
-      console.log(data);
-    });
-    */
 
     console.log(`este es el id del plato: ${id}`);
   

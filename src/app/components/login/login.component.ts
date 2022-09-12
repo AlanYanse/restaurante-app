@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
   
   ingresar(): void{
     
-    //console.log(this.formGroup);
 
     const email = this.formGroup.get('email')?.value;
     const password = this.formGroup.get('password')?.value;
