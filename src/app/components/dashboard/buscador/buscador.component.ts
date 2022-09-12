@@ -12,6 +12,7 @@ export class BuscadorComponent implements OnInit {
 
   busqueda: string = "";
   listaPlatos: Item[] = [];
+  loading: boolean = false;
 
   constructor(private _platosService: PlatosService) { }
 
@@ -19,14 +20,27 @@ export class BuscadorComponent implements OnInit {
 
   }
 
+  spinnerloading(): void{
+
+    this.loading = true;
+    setTimeout(()=>{
+      this.loading = false;
+    }, 2500);
+
+    
+  }
+
   buscarPlatos():void{
     
+    this.spinnerloading();
     console.log(this.busqueda);
     this.validacion(this.busqueda);
+    this.busqueda = ""; // Para vaciar el input
     
   }
 
   validacion(valor: string): void{
+
 
     if(valor.length < 2){
       
@@ -39,15 +53,16 @@ export class BuscadorComponent implements OnInit {
       
       this._platosService.obtenerPlatos(this.busqueda).subscribe((data) => {
       
-        //console.log(data);
-
-        this.listaPlatos = data.results;
-
-        console.log(this.listaPlatos);
+        this.listaPlatos = data.results;        
       
       });
       
     }
   }
+
+
+  
+
+
 
 }

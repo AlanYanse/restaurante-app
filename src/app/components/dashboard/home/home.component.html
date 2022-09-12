@@ -8,3 +8,6 @@
         <app-plato-item [plato]="item" [isInMisPlatos]="true"></app-plato-item>
     </div>
 </div>
+<div class="leyenda" *ngIf="listaPlatos.length === 0">
+    <h3>Aún no hay platos agregados</h3>
+</div>

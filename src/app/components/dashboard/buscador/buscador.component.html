@@ -1,6 +1,10 @@
-<div class="container d-flex justify-content-center" style="width: 50%;">
+
+
+
+
+<div class="container d-flex justify-content-center">
     <div class="input-group mt-3 mb-3">
-        <input class="input-buscador" type="text" class="form-control transparente" id="txtBuscar" [(ngModel)]="busqueda">
+        <input class="input-buscador" type="text" class="form-control transparente" id="txtBuscar" [(ngModel)]="busqueda" autocomplete="off">
         <button type="button" class="btn btn" style="background-color: #262e42; color: white;" (click)="buscarPlatos()">
             Buscar</button>
     </div>
@@ -66,7 +70,15 @@
 
 -->
 
-<div class="container">
+<!-- Spinner!!! -->
+
+<div class="spin" *ngIf="loading">
+  <div class="spinner-border" role="status">
+      <span class="visually-hidden"></span>
+  </div>
+</div>
+
+<div class="container" *ngIf="!loading">
   <div *ngFor="let item of listaPlatos">
       <app-plato-item [plato]="item"></app-plato-item>
   </div>
