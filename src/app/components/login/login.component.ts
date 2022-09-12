@@ -35,12 +35,15 @@ export class LoginComponent implements OnInit {
         this.router.navigate([""]);
       }, (err: any) => {
         // spinner hide
+        this.loading = false;
         alert("error");
+        this.formGroup.reset();
       })
     
     }else{
       alert("Alguna de las credenciales ingresadas no es válida");
       this.formGroup.reset();
+      
     }
 
 

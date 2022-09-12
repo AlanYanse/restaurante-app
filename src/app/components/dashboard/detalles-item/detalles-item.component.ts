@@ -13,12 +13,15 @@ export class DetallesItemComponent implements OnInit {
   constructor(private _platoService: PlatosService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   plato!: Item;
+  loading: boolean = false;
 
   ngOnInit(): void {
 
     //console.log(this.activatedRoute);
 
     let id: any = this.activatedRoute.snapshot.paramMap.get("id"); // Para usar el dato que viene por parámetro en la url
+
+    this.spinnerloading();
 
     this._platoService.detallesPlato(id).subscribe((data)=>{
       
@@ -30,6 +33,16 @@ export class DetallesItemComponent implements OnInit {
     
     });
 
+  }
+
+  spinnerloading(): void{
+
+    this.loading = true;
+    setTimeout(()=>{
+      this.loading = false;
+    }, 2500);
+
+    
   }
 
 

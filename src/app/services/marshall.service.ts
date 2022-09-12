@@ -9,11 +9,11 @@ export class MarshallService {
   misPlatos: Item[] = []
 
   // Propiedades para el componente de información
-
-  private cantVeganos: number = 0;
-  private precioTotal: number = 0;
-  private promedioPreparacion: number = 0;
-  private promedioHealthScore: number = 0;
+  
+  cantVeganos: number = 0;
+  precioTotal: number = 0;
+  promedioPreparacion: number = 0;
+  promedioHealthScore: number = 0;
 
   constructor() { }
 
@@ -46,13 +46,13 @@ export class MarshallService {
   }
 
 
-
+  
   calcularAcumulados(): void {
-    
+
     this.precioTotal = 0;
     this.promedioHealthScore = 0;
     this.promedioPreparacion = 0;
-
+    
     this.misPlatos.forEach((plato: Item) => {
       this.precioTotal += plato.pricePerServing;
       this.promedioHealthScore += plato.healthScore;
@@ -64,7 +64,7 @@ export class MarshallService {
     this.promedioPreparacion = this.promedioPreparacion / cantidadPlatos;
     this.calcularVeganos();
   }
-
+  
   
   calcularVeganos(): void {
    
@@ -82,32 +82,10 @@ export class MarshallService {
     this.misPlatos.splice(index, 1);
     this.calcularAcumulados();
     alert("Se quito el plato");
+    console.log(this.precioTotal);
 
   }
 
-  // Métodos get para acceder a las propiedades de clase
-
-  public getCantVeganos(): number{
-
-    return Math.round(this.cantVeganos);
-  }
-
-  public getPrecioTotal(): number{
-
-    return Math.round(this.precioTotal);
-  }
-
-  public getPromedioPreparacion(): number{
-
-    return Math.round(this.promedioPreparacion);
-  }
-
-  public getPromedioHealthScore(): number{
-
-    return Math.round(this.promedioHealthScore);
-  }
-
-
-
+  
 
 }
