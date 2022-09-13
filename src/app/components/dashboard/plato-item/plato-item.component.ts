@@ -4,12 +4,15 @@ import { Item } from 'src/app/interfaces/item';
 import { MarshallService } from 'src/app/services/marshall.service';
 import { PlatosService } from 'src/app/services/platos.service';
 
+
 @Component({
   selector: 'app-plato-item',
   templateUrl: './plato-item.component.html',
   styleUrls: ['./plato-item.component.css']
 })
 export class PlatoItemComponent implements OnInit {
+
+ 
 
   @Input() plato: any;
   @Input() isInMisPlatos: boolean = false;
@@ -21,6 +24,7 @@ export class PlatoItemComponent implements OnInit {
   agregarPlato(plato: Item): void{
 
     this.marshallService.addPlatoService(plato);
+    
   }
 
   
