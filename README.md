@@ -2,6 +2,40 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
+## Descripción breve
+
+Proyecto desarrollado en base a un desafío para Alkemy en el cual se requiere una app de restaurante que permite a los clientes gestionar sus platos.
+
+
+## Presentación
+
+
+
+![This is a alt text.](/readme-img/alaCarta-info.png "This is a sample image.")
+
+![This is a alt text.](/readme-img/screenLogin.PNG  "This is a sample image.")
+
+![This is a alt text.](/readme-img/homeInicio.PNG "This is a sample image.")
+
+![This is a alt text.](/readme-img/buscador.PNG "This is a sample image.")
+
+![This is a alt text.](/readme-img/homePedidos.PNG "This is a sample image.")
+
+![This is a alt text.](/readme-img/detalles.PNG "This is a sample image.")
+
+![This is a alt text.](/readme-img/responsiveLogin.png "This is a sample image.")
+
+![This is a alt text.](/readme-img/responsiveBuscador.png "This is a sample image.")
+
+![This is a alt text.](/readme-img/responsiveHome.png "This is a sample image.")
+
+![This is a alt text.](/readme-img/responsiveDetalles.png "This is a sample image.")
+
+## Link de la app
+
+* email: challenge@alkemy.org
+* password: react
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
