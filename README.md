@@ -31,10 +31,7 @@ Proyecto desarrollado en base a un desafío para Alkemy en el cual se requiere u
 
 ![This is a alt text.](/readme-img/responsiveDetalles.png "This is a sample image.")
 
-## Link de la app
 
-* email: challenge@alkemy.org
-* password: react
 
 ## Development server
 
