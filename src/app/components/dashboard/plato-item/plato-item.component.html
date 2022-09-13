@@ -11,8 +11,8 @@
           <p>Nombre: {{ plato.title }} </p>
           <p *ngIf="!isInMisPlatos">Tiempo de preparación: {{ plato.readyInMinutes }} </p>
           <p *ngIf="!isInMisPlatos">healthScore: {{ plato.healthScore }} </p>
-          <p *ngIf="!isInMisPlatos">vegano: {{ plato.vegan }} </p>
-          <p *ngIf="!isInMisPlatos">Vegetariano: {{ plato.vegetarian }} </p> 
+          <p *ngIf="!isInMisPlatos">vegano: {{ plato.vegan === false ? "No" : "Si" }} </p>
+          <p *ngIf="!isInMisPlatos">Vegetariano: {{ plato.vegetarian === false ? "No" : "Si" }} </p> 
           <p>Precio: {{ plato.pricePerServing }} </p>
         </div>
       </div>
