@@ -1,0 +1,37 @@
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="">
+        
+        <!-- Spinner!!! -->
+
+        <div class="d-flex justify-content-center" *ngIf="loading">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden"></span>
+            </div>
+        </div>
+        
+        
+        <form [formGroup]="formGroup" (ngSubmit)="ingresar()" *ngIf="!loading">
+            <h3 style="text-align: center;">Bienvenidos</h3>
+            <div class="d-flex justify-content-center">
+                <img src="../../../assets/img/login.png" style="width: 200px; margin-bottom: 10px;" alt="">
+            </div>
+            <div class="mb-2">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control ancho" placeholder="name@example.com" autocomplete="off" formControlName="email">
+            </div>
+            <div class="mb-2">
+                <label for="exampleFormControlInput1" class="form-label">Password</label>
+                <input type="password" class="form-control ancho" placeholder="password" autocomplete="off" formControlName="password">
+            </div>
+            <div class="mb-2">
+                <input type="submit" class="form-control ancho btn" style="margin-top: 10px; color: white; background-color: #262e42;" value="LogIn" [disabled]="formGroup.invalid">
+            </div>
+
+        </form>
+        
+    </div>
+</div>
+
+
+

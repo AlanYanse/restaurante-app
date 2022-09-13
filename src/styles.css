@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: #f7cacb;
+}
+
+.imagen{
+    width: 250px;
+}
+
+
+.visualizador{
+    
+    border-bottom: 3px solid #d03d46;
+    padding-bottom: 20px;
+}
+
+.box{
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spin {
+    display: flex;
+    height: 60vh;
+    align-items: center;
+    justify-content: center;
+}
+
+
